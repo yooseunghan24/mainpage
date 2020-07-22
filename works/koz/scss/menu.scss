@@ -1,0 +1,320 @@
+@charset "utf-8";
+@import "variable.scss";
+@import "mixin.scss";
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header h1 {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  display: inline-block;
+  @include size(tablet) {
+    font-size: 20px;
+  }
+  @include size(desktop) {
+    left: 46px;
+    top: 47px;
+  }
+  a {
+    color: $color-logo;
+    font-weight: 600;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    padding-left: 10px;
+    margin-left: -3px;
+    font-size: 16px;
+    overflow: hidden;
+    vertical-align: middle;
+    @include size(tablet) {
+      font-size: 20px;
+      display: initial;
+      width: auto;
+      vertical-align: initial;
+      font-weight: 600;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      bottom: 4px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #b3b3b3;
+      @include size(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+.menu_btn {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  @include size(desktop) {
+    top: 47px;
+    right: 50px;
+  }
+  &:hover span:nth-child(2) {
+    width: 22px;
+  }
+  &.active {
+    span:first-child {
+      transform: rotate(-45deg);
+      width: 10px;
+      right: 9px;
+    }
+    span:nth-child(2) {
+      transform: rotate(90deg);
+      width: 20px;
+    }
+    span:last-child {
+      transform: rotate(45deg);
+      width: 10px;
+      top: 9px;
+      right: 1px;
+    }
+  }
+  span {
+    position: absolute;
+    height: 2px;
+    background: $color-logo;
+    right: 0;
+    &:first-child {
+      top: 9px;
+      width: 22px;
+      transition: 0.6s;
+    }
+    &:nth-child(2) {
+      top: 14px;
+      width: 16px;
+      transition: 0.2s;
+    }
+    &:nth-child(3) {
+      top: 19px;
+      width: 22px;
+      transition: 0.2s;
+    }
+  }
+}
+nav {
+  transform: translateY(-100vh);
+  transition: 0.5s;
+  z-index: 9;
+  text-align: center;
+  background: rgba(23, 23, 23, 0.97);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: $color-menu;
+  a {
+    color: $color-menu;
+  }
+}
+.menu {
+  left: 0;
+  top: 120px;
+  width: 100%;
+  padding: 0 25px;
+  font-size: 11px;
+  margin-top: 100px;
+  text-align: center;
+  @include size(tablet) {
+    margin-top: 180px;
+  }
+  @include size(desktop) {
+    margin: 160px 0 50px;
+  }
+  @include size(large-desktop) {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:1201px;
+  }
+  li:nth-child(3) {
+    ul {
+      height: 0;
+      overflow: hidden;
+      transition: 0.2s;
+      &.active {
+        margin-top: -10px;
+        height: 62px;
+      }
+      @include size(desktop) {
+        &.active {
+          margin-top: 0;
+          height: 92px;
+        }
+      }
+      @include size(large-desktop) {
+        &.active {
+          height: 110px;
+        }
+      }
+      a {
+        font-size: 14px;
+        color: $color-menu;
+        opacity: 0.6;
+        line-height: 0.8;
+        @include size(desktop) {
+          font-size: 23px;
+          line-height: 1.2;
+        }
+        @include size(large-desktop) {
+          font-size: 32px;
+        }
+        &:hover {
+          color: $color-hover-menu;
+        }
+      }
+    }
+  }
+}
+.menu a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 0;
+  transition: 0.2s;
+  @include size(desktop) {
+    font-size: 30px;
+  }
+  @include size(large-desktop) {
+    font-size: 47px;
+  }
+  &:hover {
+    color: $color-hover-menu;
+  }
+}
+.user_case {
+  margin-top: 26px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include size(desktop) {
+    margin: 20px 0;
+  }
+  a {
+    font-size: 16px;
+    padding: 0 15px;
+    transition: 0.2s;
+    @include size(desktop) {
+      font-size: 20px;
+      padding: 0 22px;
+    }
+    @include size(large-desktop) {
+      font-size: 30px;
+    }
+    &:hover {
+      color: $color-hover-menu;
+    }
+  }
+}
+.sns_list {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include size(desktop) {
+    padding: 100px 0 20px;
+    margin: 20px 0;
+  }
+  li {
+    padding: 0 6px;
+  }
+  a {
+    text-indent: -9999px;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin: 0 6px;
+    transition: 0.2s;
+    @include size(desktop) {
+      margin: 0 20px;
+      width: 29px;
+      height: 29px;
+    }
+  }
+  li:first-child a {
+    background: url(../img/sns_icon.png) no-repeat 0 -1px/620%;
+    &:hover {
+      background-image: url(../img/sns_icon_hover.png);
+    }
+  }
+  li:nth-child(2) a {
+    background: url(../img/sns_icon.png) no-repeat -24px -1px/620%;
+    @include size(desktop) {
+      background-position-x: -28px;
+    }
+    &:hover {
+      background-image: url(../img/sns_icon_hover.png);
+    }
+  }
+  li:nth-child(3) a {
+    background: url(../img/sns_icon.png) no-repeat -48px -1px/620%;
+    @include size(desktop) {
+      background-position-x: -57px;
+    }
+    &:hover {
+      background-image: url(../img/sns_icon_hover.png);
+    }
+  }
+  li:last-child a {
+    background: url(../img/sns_icon.png) no-repeat -73px -1px/620%;
+    @include size(desktop) {
+      background-position-x: -88px;
+    }
+    &:hover {
+      background-image: url(../img/sns_icon_hover.png);
+    }
+  }
+} // sns_list 끝
+.footer_list {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+.footer_info {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 11px;
+  @include size(desktop) {
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+}
+.copyright {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 11px;
+  @include size(desktop) {
+    font-size: 13px;
+    padding: 0;
+  }
+}

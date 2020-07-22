@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../index.css"> 
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <title>PHARMICELL</title>
+  <script src="../js/jquery-3.5.0.js"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../images/logo.png" alt="파미셀 로고"></a></h1>
+    <h2 class="hide">대메뉴</h2>  
+    <nav>
+      <ul>
+        <li><a href="a_ceosay.html">ABOUT US</a>
+          <ul class="sub_menu">
+            <li><a href="a_ceosay.html">CEO 인사말</a></li>
+            <li><a href="a_manage.html">경영철학</a></li>
+            <li><a href="a_history.html">연혁</a></li>
+            <li><a href="a_businessfield.html">사업영역</a></li>
+            <li><a href="a_comeway.html">오시는 길</a></li>                 
+          </ul>
+        </li>
+        <li><a href="b_cellgram.html">BUSINESS</a>
+          <ul class="sub_menu">
+            <li><a href="b_cellgram.html">Cellgram</a></li>
+            <li><a href="b_bio.html">바이오 케미컬</a></li>
+            <li class="renewal"><a href="#">줄기세포은행</a></li>
+            <li class="renewal"><a href="#" target="_blank">화장품&nbsp;<img src="../images/shortcut.png" alt="파미셀랩 바로가기" style="transform:translateY(20%); width:20px; height:20px;"></a></li>
+            <li><a href="b_partner.html">Partnership</a></li>
+          </ul>
+        </li>
+        <li><a href="r_intro.html">R&D</a>
+          <ul class="sub_menu">
+            <li><a href="r_intro.html">연구소 소개</a></li>
+            <li><a href="r_cmo.html">CMO 소개</a></li>
+            <li class="renewal"><a href="#">파이프라인</a></li>
+          </ul>
+        </li>
+        <li><a href="p_notice.html">PR</a>
+          <ul class="sub_menu">
+            <li><a href="p_notice.html">공지사항</a></li>
+            <li><a href="p_news.html">보도자료</a></li>
+            <li><a href="p_media.html">IN 미디어</a></li>
+          </ul>
+        </li>
+        <li><a href="#">IR</a>
+          <ul class="sub_menu">
+            <li class="renewal"><a href="#">주가정보</a></li>
+            <li class="renewal"><a href="#">재무정보</a></li>
+            <li class="renewal"><a href="#">공시정보</a></li>
+            <li class="renewal"><a href="#">자료실</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="sub_menu_back"></div><!--드롭다운 배경-->
+    </nav>
+  </header>
+  <div class="submain aboutus_history_background">
+    <div class="submain_text">
+      <p>연혁</p>
+      <p>차세대 바이오신약 개발을 위해 끊임없이 정진하고 있습니다.</p>
+    </div>
+  </div>
+  <div class="lnb">
+    <ul>
+      <li><a id="home_icon" href="../index.html" title="홈으로"><img src="../images/home_icon.png" alt="홈으로"></a></li>
+      <li><a href="a_ceosay.html">ABOUT US</a>
+        <ul>
+          <li><a href="b_cellgram.html.html">BUSINESS</a></li>
+          <li><a href="r_intro.html">R&D</a></li>
+          <li><a href="p_notice.html">PR</a></li>
+          <li class="renewal"><a href="#">IR</a></li>
+        </ul>
+      </li>
+      <li><a href="a_history.html">연혁</a>
+        <ul>
+          <li><a href="a_ceosay.html">CEO 인사말</a></li>
+          <li><a href="a_manage.html">경영철학</a></li>
+          <li><a href="a_businessfield.html">사업영역</a></li>
+          <li><a href="a_comeway.html">오시는 길</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="tab_wrap">
+    <div class="tab">
+      <div><a class="tablink on" onclick="showmenu(this, 'tab_1', 'tab_2')">2010~현재</a></div>
+      <div><a class="tablink" onclick="showmenu(this, 'tab_2', 'tab_1')">2002~2009</a></div>
+    </div><!--//tab-->
+    <div class="tab_contents">
+      <div class="tab_1">
+        <div>
+          <h3>2018</h3>
+          <p>바이오케미칼사업부 울산 신공장 준공</p>
+          <p>화장품 신규라인 '셀그램-에스(Cellgram-S)' 론칭</p>
+        </div>
+        <div>
+          <h3>2017</h3>
+          <p>줄기세포를 이용한 알코올성 간경변치료제(Cellgram-Liver) 임상1상 미국 FDA 승인</p>
+          <p>줄기세포를 이용한 알코올성 간경변치료제(Cellgram-Liver) 국내 조건부품목허가 신청</p>
+          <p>화장품 신규라인 ‘셀바이텐(Cx10)’ 론칭</p>
+          <p>2017 보건의료기술진흥 유공자’ 보건복지부장관상 수상</p>
+        </div>
+        <div>
+          <h3>2016</h3>
+          <p>보건복지부 '혁신형제약기업' 선정</p>
+          <p>한국산업단지공단 '글로벌선도기업' 선정</p>
+          <p>'2016 벤처 활성화 유공 포상' 산업통상자원부장관상 수상</p>
+          <p>김현수 대표, 줄기세포전문 의료기관 '김현수클리닉' 설립</p>
+        </div>
+        <div>
+          <h3>2015</h3>
+          <p>줄기세포배양액화장품 신규 라인 ‘스템씨(Stem-C)’ 론칭</p>
+        </div>
+        <div>
+          <h3>2014</h3>
+          <p>각자대표 체제 변경(김성래 각자 대표이사 선임)</p>
+          <p>‘수출유망중소기업’ 선정(중소기업청)</p>
+          <p>줄기세포를 이용한 중증하지허헐 치료제(Cellgram-CLI) 상업화임상(IND-I상) 승인 – MFDS(KFDA)</p>
+          <p>줄기세포를 이용한 발기부전 치료제(Cellgram-ED) 상업화임상(IND-I상) 승인 – MFDS(KFDA)</p>
+          <p>'유기 인계 난연제 및 이의 제조방법' 일본 내 특허 등록</p>
+        </div>
+        <div>
+          <h3>2013</h3>
+          <p>아이디비켐㈜ 소규모 합병</p>
+          <p>중국 SFDA 위생허가증 획득</p>
+          <p>줄기세포배양액함유화장품 OEM 사업 개시</p>
+        </div>
+        <div>
+          <h3>2012</h3>
+          <p>아이디비켐㈜ 인수 (현재 바이오케미컬사업부의 전신)</p>
+          <p>줄기세포를 이용한 알코올성 간경변치료제(Cellgram-Liver) 상업화임상(IND-II상) 승인 – KFDA</p>
+        </div>
+        <div>
+          <h3>2011</h3>
+          <p>'파미셀 주식회사'로 사명 변경</p>
+          <p>세계 최초 줄기세포치료제 하티셀그램-에이엠아이(Hearticellgram-AMI) 품목허가 - KFDA</p>
+          <p>대한민국보건산업대상 산업발전부문 대상 수상(보건복지부)</p>
+        </div>
+        <div>
+          <h3>2010</h3>
+          <p>성남 GMP 공장 완공</p>
+        </div>
+      </div><!--//tab_1-->
+      <div class="tab_2">
+        <div>
+          <h3>2009</h3>
+          <p>줄기세포배양액화장품사업 개시</p>
+        </div>
+        <div>
+          <h3>2008</h3>
+          <p>특허등록 : 항암면역치료용 수지상세포 생산기술 미국특허(제7390658호)</p>
+        </div>
+        <div>
+          <h3>2007</h3>
+          <p>‘차세대 세계일류상품 생산기업’ 선정(지식경제부)</p>
+          <p>줄기세포를 이용한 척수손상 치료제 상업화임상(IND-II/III상) 승인 - KFDA</p>
+          <p>특허등록 : 신경세포 생산기술 미국(7229827 호), 일본(3976190 호), 호주(2003273118호)</p>
+        </div>
+        <div>
+          <h3>2006</h3>
+          <p>줄기세포를 이용한 급성심근경색 치료제 ‘하티셀그램-에이엠아이(Hearticellgram-AMI)’ 상업화임상(IND-II/III상) 승인 – KFDA</p>
+        </div>
+        <div>
+          <h3>2005</h3>
+          <p>보건산업기술대전 연구부문 대상 수상(보건복지부)</p>
+          <p>줄기세포를 이용한 급성 뇌경색 치료제 상업화임상(IND-III상) 승인 - KFDA</p>
+        </div>
+        <div>
+          <h3>2004</h3>
+          <p>성체줄기세포 보관사업 개시</p>
+          <p>특허등록: 줄기세포를 이용한 항암면역치료용 고기능성 수지상세포 생산기술 (0429140호)</p>
+          <p>특허등록: 줄기세포를 이용한 뇌/신경계 질환 치료용 신경세포 생산기술 (0449141호)</p>
+        </div>
+        <div>
+          <h3>2003</h3>
+          <p>원주세브란스기독병원 내 세포치료센터 개설</p>
+        </div>
+        <div>
+          <h3>2002</h3>
+          <p>회사 설립</p>
+        </div>
+      </div><!--//tab_2-->
+    </div>
+  </div><!--//tab_wrap-->
+  <footer>
+    <ul>
+      <li><a href="a_ceosay.html">ABOUT US</a></li>
+      <li><a href="b_cellgram.html">BUSINESS</a></li>
+      <li><a href="r_intro.html">R&D</a></li>
+      <li><a href="p_notice.html">PR</a></li>
+      <li class="renewal"><a href="#">IR</a></li>
+    </ul>
+    <div>
+      <a href="../index.html"><img src="../images/footer_logo.png" alt="파미셀 로고"></a>
+      <p><strong>주소</strong>: 서울특별시 강남구 언주로 874, 7층(신사동, 쌍봉빌딩)<br>
+        <strong>Tel</strong>: 02.3496.0114&nbsp; <strong>Fax</strong>: 02.3496.0159&nbsp; <strong>E-mail</strong>:
+        pmc@pharmicell.com</p>
+      <span>COPYRIGHT ⓒ 2016 PHARMICELL Co., Ltd ALL RIGHTS RESERVED.</span>
+    </div>
+    <div><a href="#top" style="color:#fff; font-size: 30px;">&#8593;</a></div>
+  </footer>
+<script src="../js/menu.js"></script>
+<script src="../js/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+@mixin tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

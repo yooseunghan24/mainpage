@@ -1,0 +1,215 @@
+@charset "utf-8";
+html,
+body {
+  height: 100%;
+}
+main {
+  display: flex;
+  height: 100%;
+}
+.portrait {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 30px 20px;
+  transition: 0.3s;
+  position: relative;
+}
+.portrait > p {
+  font-size: 4.8vw;
+  position: relative;
+  z-index: 1;
+}
+.portrait > p > span {
+  font-size: 50px;
+  font-family: "Tangerine";
+}
+.portrait::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.portrait.active {
+  color: #fff;
+  opacity: 1;
+}
+.portrait.active::after {
+  opacity: 1;
+}
+.hubert::after {
+  background: url(../img/hubert.png) no-repeat -200px 0 / cover;
+}
+.rembrandt::after {
+  background: url(../img/rembrandt.png) no-repeat -100px 0 / cover;
+}
+.henry::after {
+  background: url(../img/henry.jpg) no-repeat -100px 0 / cover;
+}
+.charles::after {
+  background: url(../img/charles.jpg) no-repeat -110px 0 / cover;
+}
+.info_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  display: none;
+}
+.info_wrap .face {
+  width: 25%;
+  height: 100%;
+  z-index: 10;
+  box-shadow: 0 0 5px 2px #000;
+}
+.info_wrap .info {
+  width: 75%;
+  height: 100%;
+  z-index: 7;
+  position: relative;
+}
+.close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  background: url(../img/close.png) no-repeat;
+  z-index: 20;
+  transform: translateX(-50%);
+}
+.info_wrap .info p {
+  color: #fff;
+  padding: 50px 150px 0 150px;
+}
+.info_wrap .info p span {
+  font-size: 24px;
+}
+.info_wrap .info p:nth-of-type(1) {
+  font-size: 100px;
+  padding-top: 100px;
+  position: relative;
+}
+.info_wrap .info p:nth-of-type(2) {
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.hubert_info_wrap .face {
+  background: url(../img/hubert.png) no-repeat -200px 0 / cover;
+}
+.hubert_info_wrap .info {
+  background: url(../img/hubertback.png) no-repeat 0 -100px;
+}
+.rembrandt_info_wrap .face {
+  background: url(../img/rembrandt.png) no-repeat -100px 0 / cover;
+}
+.rembrandt_info_wrap .info {
+  background: url(../img/rembrandtback.jpg) no-repeat center;
+}
+.henry_info_wrap .face {
+  background: url(../img/henry.jpg) no-repeat -100px 0 / cover;
+}
+.henry_info_wrap .info {
+  background: url(../img/henryback.jpg) no-repeat;
+}
+.charles_info_wrap .face {
+  background: url(../img/charles.jpg) no-repeat -110px 0 / cover;
+}
+.charles_info_wrap .info {
+  background: url(../img/charlesback.jpg) no-repeat;
+}
+/* 태블릿 */
+@media (max-width: 1023px) {
+  header h1 a {
+    color: #000;
+  }
+  main {
+    width: 100%;
+  }
+  .line {
+    background: #000;
+  }
+  .portrait {
+    padding: 0 0 20px 20px;
+  }
+  .portrait::after {
+    opacity: 0.3;
+  }
+  .portrait > p {
+    font-size: 4.8vw;
+  }
+  .portrait > p > span {
+    font-size: inherit;
+  }
+  .hubert::after,
+  .hubert_info_wrap .face {
+    background-position-x: -300px;
+  }
+  .rembrandt::after,
+  .henry::after,
+  .charles::after,
+  .rembrandt_info_wrap .face,
+  .henry_info_wrap .face,
+  .charles_info_wrap .face {
+    background-position-x: -200px;
+  }
+  .info_wrap .info p:nth-of-type(1) {
+    font-size: 6vw;
+    padding: 10% 5% 5%;
+  }
+  .info_wrap .info p:nth-of-type(2) {
+    font-size: 2vw;
+    padding: 0 5%;
+  }
+  .info_wrap .info .prev {
+    width: 33.6px;
+    height: 33.6px;
+    background-size: 100%;
+    top: 3%;
+    left: 5%;
+  }
+}
+@media (max-width: 767px) {
+  main {
+    flex-wrap: wrap;
+  }
+  .portrait {
+    width: 50%;
+    height: 50%;
+  }
+  .hubert::after,
+  .rembrandt::after,
+  .henry::after,
+  .charles::after {
+    background-position: 50% 0;
+  }
+  .info_wrap {
+    flex-direction: column;
+  }
+  .info_wrap .face {
+    background-position: 50% 0;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+  }
+  .info_wrap .info {
+    width: 100%;
+    background-position: center;
+    height: 50%;
+    overflow: auto;
+  }
+  .info_wrap .info p:nth-of-type(2) {
+    font-size: 3vw;
+  }
+  .henry_info_wrap .info, .charles_info_wrap .info {
+    order: 1;
+  }
+}

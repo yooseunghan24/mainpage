@@ -1,0 +1,129 @@
+@charset "utf-8";
+header {
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left: 0;
+	z-index: 5;
+}
+header h1 {
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	left: 3%;
+	top: 25px;
+	z-index:5;
+}
+header h1 a {
+	font-size: 16px;
+	display: block;
+	font-family: 'Raleway';
+}
+header h1 a img {
+	width: 100%;
+	height: 100%;
+}
+.menu_btn {
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 3%;
+	z-index: 5;
+}
+.line {
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: #000;
+}
+.line2 {
+	margin-top: 7px;
+}
+.menu_btn.active .line1 {
+	animation: line1Ani .5s forwards;
+}
+.menu_btn.active .line2 {
+	animation: line2Ani .5s forwards;
+}
+@keyframes line1Ani {
+	0% {top: 5px; }
+	100% {top: 5px; transform: rotate(405deg);}
+}
+@keyframes line2Ani {
+	0% {bottom: 4px;}
+	100% { bottom: 4px; transform: rotate(315deg);}
+}
+.menu_btn.no_active .line1 {
+	animation: noline1Ani .5s forwards;
+}
+.menu_btn.no_active .line2 {
+	animation: noline2Ani .5s forwards;
+}
+@keyframes noline1Ani {
+	0% { top: 5px; transform: rotate(405deg);}
+	50% {top: 5px;}
+	99% { transform: rotate(0);}
+	100% {top: 0; background: #000;}
+}
+@keyframes noline2Ani {
+	0% { bottom: 4px; transform: rotate(315deg);}
+	50% {bottom: 4px;}
+	99% { transform: rotate(0);}
+	100% { bottom: 0; background: #000;}
+}
+nav {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: scale(0);
+	background: #f2efe8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+nav.active {
+	transform: scale(1);
+}
+nav a {
+	display: block;
+	position: relative;
+	color: #000;
+	font-size: 150px;
+	opacity: 0;
+	z-index:5;
+	transition: .3s;
+}
+nav a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	background: #000;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	transition: .3s;
+	overflow: hidden;
+}
+nav a:hover::after {
+	width: 100%;
+	height: 2px;
+}
+nav a.active {
+	opacity: 1;
+}
+nav a sup {
+	font-style: italic;
+	font-size: 50px;
+}
+@media (max-width: 767px) {
+	nav a {
+		font-size: 20vw;
+	}
+}

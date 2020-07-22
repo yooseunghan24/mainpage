@@ -1,0 +1,16 @@
+@charset "utf-8";
+@mixin size($device) {
+  @if $device == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $device == desktop {
+    @media (min-width: 993px) {
+      @content;
+    }
+  } @else if $device == large-desktop {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}

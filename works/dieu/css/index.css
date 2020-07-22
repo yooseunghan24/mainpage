@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* index */
+html, body {
+	height: 100%;
+}
+#wrap {
+	height: 100%;
+	width: 3300px;
+}
+main {
+	height: 100%;
+	display: flex;
+}
+.main_title {
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+.main_title .sub_title {
+	font-size: 250px;
+	position: absolute;
+	top: 300px;
+	left: 650px;
+	width: 1797px;
+	transition: .4s;
+}
+.picture_wrap {
+	position: absolute;
+	transition: .7s;
+}
+.picture {
+	box-shadow: 0 0 3px 2px #777;
+}
+.picture_wrap > div img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.bridge {
+	width: 410px;
+	height: 308px;
+}
+.washington {
+	width: 206px;
+	height: 256px;
+}
+.girl {
+	width: 320px;
+	height: 261px;
+}
+.landscape {
+	width: 410px;
+	height: 306px;
+}
+.sea {
+	width: 384px;
+	height: 234px;
+}
+.jefferson {
+	width: 263px;
+	height: 320px;
+}
+.louis {
+	width: 512px;
+	height: 375px;
+}
+.birthday {
+	width: 262px;
+	height: 320px;
+}
+.bridge_wrap {
+	top: 70px;
+	left: 50px;
+}
+.washington_wrap {
+	left: 900px;
+	top: 0;
+	display: flex;
+}
+.girl_wrap {
+	left: 200px;
+	bottom: 0;
+}
+.landscape_wrap {
+	left: 950px;
+	bottom: 0;
+	display: flex;
+}
+.sea_wrap {
+	left: 1500px;
+	top: 50px;
+	display: flex;
+}
+.jefferson_wrap {
+	left: 1950px;
+	bottom: 30px;
+	display: flex;
+}
+.louis_wrap {
+	left: 2600px;
+	top: 50px;
+}
+.birthday_wrap {
+	left: 2650px;
+	bottom: 0;
+	display: flex;
+}
+.text {
+	padding: 10px 0 0 10px;
+	white-space: nowrap;
+}
+.text p:nth-of-type(1) {
+	font-family: 'Tangerine';
+	font-size: 24px;
+}
+.text p:nth-of-type(2) {
+	font-size: 30px;
+	font-weight: bold;
+}
+.text p:nth-of-type(3) {
+	font-size: 22px;
+}
+.bridge_wrap .text, .louis_wrap .text, .girl_wrap .text {
+	padding-left: 0;
+}
+.washington_wrap .text {
+	padding-top: 100px;
+}
+.sea_wrap .text {
+	padding-top: 120px;
+}
+.landscape_wrap .text {
+	padding-top: 100px;
+}
+.birthday_wrap .text {
+	padding-top: 200px;
+}
+/* 태블릿 */
+@media (max-width: 1023px) {
+	#wrap {
+		width: 100%;
+	}
+	.main_title {
+		width: 100%;
+	}
+	.main_title .sub_title {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		font-size: 13vw;
+		width: 100%;
+		text-align: center;
+		transition: none;
+	}
+	.bridge_wrap {
+		left: 5%;
+		top: 7%;
+	}
+	.washington_wrap {
+		left: 75%;
+		top: 7%;
+	}
+	.girl_wrap {
+		left: 5%;
+		top: 60%;
+	}
+	.landscape_wrap {
+		left: 55%;
+		top: 60%;
+	}
+	.text {
+		display: none;
+	}
+	.sea_wrap, .jefferson_wrap, .louis_wrap, .birthday_wrap {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+  .washington_wrap, .girl_wrap {
+		display: none;
+	}
+	.bridge_wrap, .landscape_wrap {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+	.bridge_wrap .picture, .landscape_wrap .picture {
+		width: 80%;
+    height: 80%;
+		margin: auto;
+		box-shadow: none;
+	}
+}

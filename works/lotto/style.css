@@ -1,0 +1,62 @@
+@charset "utf-8";
+* {margin:0; padding: 0; box-sizing: border-box;}
+html, body {
+  background: #eee;
+}
+#wrap {
+  width: 400px;
+  padding: 50px 0;
+  margin: auto;
+  background: #fff;
+  position: relative;
+  border: 3px solid skyblue;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.dev {
+  font-size: 12px;
+}
+.lotto {
+  padding: 5px 10px;
+  background: #0a0;
+  color: #fff;
+  border: 1px solid #0a0;
+  border-radius: 5px;
+}
+.lotto:hover {
+  background: #0b0;
+}
+.reset {
+  position: absolute;
+  padding: 3px;
+  right:0;
+  bottom: 10px;
+}
+.sheet_wrap {
+  margin-left: 100px;
+}
+.number_list {
+  text-align: center;
+  padding-top: 30px;
+}
+.accumulate {
+  height: 300px;
+  border: 3px solid skyblue;
+  border-left: none;
+  border-right: none;
+  overflow: auto;
+}
+.accumulate div {
+  padding: 5px 30px;
+  counter-increment: number-count;
+  font-weight: bold;
+  position: relative;
+}
+.accumulate div::before {
+  content: counter(number-count) ".";
+  font-weight: normal;
+  padding: 5px 10px;
+
+}

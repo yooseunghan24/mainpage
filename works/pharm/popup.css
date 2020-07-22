@@ -1,0 +1,47 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+html, body {
+  background: #f1f1f1;
+  color: #000;
+}
+.wrap {
+  width: 1000px;
+  background: #fff;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px 100px;
+  position: relative;
+  box-shadow: 0 0 3px 1px #ddd;
+}
+.wrap span {
+  display: block;
+}
+strong {
+  display: block;
+  margin: 20px 0;
+}
+h1 {
+  margin-bottom: 20px;
+}
+h2 {
+  margin: 20px 0;
+}
+.page {
+  position: absolute;
+  top: 50px;;
+  right: 50px;
+}
+.page a:hover {
+  text-decoration: underline;
+}
+.prev {
+  transform: scaleX(-1);
+}

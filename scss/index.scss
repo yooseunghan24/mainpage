@@ -1,0 +1,544 @@
+@charset "utf-8";
+@import "variable";
+@import "mixin";
+#wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.moving-wrap {
+  transition: .6s;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  h1 {
+    position: fixed;
+    top: 5%;
+    left: 3%;
+    @include medium {
+      top: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+header h1 a {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 70px;
+  @include medium {
+    width: 20px;
+    height: 30px;
+  }
+  span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-family: $font-title;
+    @include medium {
+      font-size: 12px;
+    }
+    &.y {
+      top: 0;
+      left: 0;
+    }
+    &.s {
+      top: 0;
+      left: 22px;
+      @include medium {
+        left: 9px;
+      }
+    }
+    &.h {
+      bottom: 0;
+      left: 0;
+      @include medium {
+        bottom: 6px;
+      }
+    }
+    &.o {
+      bottom: 0;
+      left: 28px;
+      @include medium {
+        left: 12px;
+        bottom: 6px;
+      }
+    }
+  }
+}
+nav {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  width: 500px;
+  @include large {
+    width: 400px;
+  }
+  @include medium {
+    width: 90vw;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  li {
+    letter-spacing: 1.5px;
+    font-size: 16px;
+  }
+}
+.side-btn {
+  position: fixed;
+  bottom: 5%;
+  z-index: 10;
+  &.shortcut {
+    left: 3%;
+    .github-btn {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url(../img/icon-github.png) no-repeat;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+  &.scroll {
+    transform-origin: right;
+    transform: rotate(90deg);
+    right: 3%;
+    letter-spacing: 2px;
+    font-size: 11px;
+  }
+}
+
+.up-btn, .down-btn {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: #ddd;
+    width: 20px;
+    height: 1px;
+    @include medium {
+      width: 12px;
+    }
+  }
+}
+.up-btn {
+  right: 10px;
+}
+.down-btn {
+  left: 10px;
+  @include medium {
+    left: 0;
+  }
+}
+
+/* article common attribute*/
+article {
+  height: 100vh;
+  position: relative;
+  background: radial-gradient(800px at 40% 0%, #393939, #1b1b1d);
+  .center-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h3 {
+      font-size: 64px;
+      font-family: $font-title;
+      text-align: center;
+      text-shadow: 0 0 3px rgba(0,0,0,0.5);
+      letter-spacing: 7px;
+      @include medium {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+/* intro */
+.iam {
+  transition: 1s;
+  transform: scale(1.2);
+  filter: blur(10px);
+  &.active {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  p {
+    text-align: left;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #000;
+    @include medium {
+      font-size: 11px;
+    }
+    &:first-child {
+      padding-left: 20vw;  
+    }
+    &:last-child {
+      padding-left: 40vw;
+      line-height: 2;
+    }
+  }
+  strong {
+    text-align: center;
+    font-family: $font-title;
+    font-size: 10vw;
+    text-shadow: 0px 0px 10px #000;
+    letter-spacing: 3px;
+    @include small {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+/* about */
+.about-me > div {
+  padding: 7% 4% 0;
+}
+.about-top {
+  display: flex;
+  & > div {
+    width: 50%;
+  }
+  .face-img-box {
+    text-align: center;
+    img {
+       max-width: 40%;
+       box-shadow: 0 0 3px 1px rgba(0,0,0,0.5);
+    }
+  }
+  .face-info-box {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include large {
+      font-size: 18px;
+    }
+    @include medium {
+      font-size: 15px;
+    }
+    p:nth-child(2) {
+      margin: 5% 0;
+    }
+  }
+}
+.about-bottom {
+  line-height: 2;
+  font-size: 18px;
+  @include large {
+    font-size: 16px;
+  }
+  @include medium {
+    font-size: 14px;
+  }
+}
+/* skill */
+.skill-box-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5% 3% 0;
+  @include medium {
+    padding-top: 0;
+  }
+  & > div {
+    width: 24%;
+    text-align: center;
+    @include medium {
+      width: 29%;
+    }
+    &:nth-child(2), &:nth-child(5) {
+      margin: 0 4%;
+    }
+  }
+}
+.skill-img-box {
+  display: inline-block;
+  margin: auto;
+  width: 100px;
+  height: 150px;
+  transition: .3s;
+  background: {
+    position: 100%;
+    size: 100%;
+    repeat: no-repeat;
+  }
+  @include large {
+    width: 44%;
+    height: 130px;
+  }
+  @include medium {
+    height: 90px;
+  }
+  &.html {
+    background-image: url(../img/skill_html.png)
+  }
+  &.css {
+    background-image: url(../img/skill_css.png)
+  }
+  &.scss {
+    background-image: url(../img/skill_sass.png)
+  }
+  &.js {
+    background-image: url(../img/skill_js.png)
+  }
+  &.git {
+    background-image: url(../img/skill_git.png)
+  }
+  &.jquery {
+    background-image: url(../img/skill_jquery.png)
+  }
+}
+.skill-text {
+  padding-top: 1%;
+  line-height: 1.8;
+  text-shadow: 0 0 5px #000;
+  font-size: 16px;
+  @include medium {
+    font-size: 12px;
+  }
+}
+/* works */
+.works .center-box h3 {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include medium {
+    display: block;
+  }
+}
+.slide-btn {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  @include medium {
+    top: 48.5%;
+  }
+  & > button {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 30px;
+      background: #ddd;
+      @include small {
+        height: 18px;
+      }
+    }
+    &::before {
+      top: -13px;
+    }
+    &::after {
+      top: 13px;
+      @include small {
+        top: 3px;
+      }
+    }
+  }
+  .prev-btn {
+    left: 3%;
+    &::before {
+      transform: rotate(30deg);
+    }
+    &::after {
+      transform: rotate(-30deg);
+    }
+  }
+  .next-btn {
+    right: 3%;
+    &::before {
+      transform: rotate(-30deg);
+    }
+    &::after {
+      transform: rotate(30deg);
+    }
+  }
+}
+.slide-wrap {
+  overflow: hidden;
+  width: 80vw;
+}
+.slide-ul {
+  display: flex;
+  transform: translateX(12.3vw);
+  transition: .7s;
+  li {
+    flex-shrink: 0;
+    transform: scale(0.65);
+    transition: .8s;
+    filter: blur(5px);
+    &.active {
+      transform: scale(1);
+      filter: none;
+      z-index: 1;
+    }
+  }
+}
+.slide-img-box {
+  width: 55vw;
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+.slide-info-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 700px;
+  height: 300px;
+  text-align: center;
+  @include medium {
+    width: 100vw;
+    height: 20%;
+    bottom: 24%;
+  }
+  .slide-info {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: .8s;
+    @include medium {
+      top: 0;
+    }
+    &.active {
+      opacity: 1;
+    }
+    h4 {
+      font-size: 74px;
+      letter-spacing: 2px;
+      font-family: $font-title;
+      color: #fff;
+      line-height: 1;
+      word-break: break-all;
+      @include medium {
+        font-size: 26px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      opacity: .5;
+      @include large {
+        margin: 2% 0;
+      }
+    }
+    a {
+      width: 200px;
+      padding: 1.5% 3%;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      color: #eee;
+      margin-top: 1%;
+      transition: .3s;
+      display: none;
+      font-size: 16px;
+      @include medium {
+        font-size: 12px;
+      }
+      &.active {
+        display: inline-block
+      }
+      &:hover {
+        background: #eee;
+        color: #333;
+      }
+    }
+  }
+}
+/* contact */
+.contact .center-box {
+  flex-direction: column;
+  & > div {
+    margin-top: 8%;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 300px;
+      height: 100px;
+      position: relative;
+    }
+    a:first-child {
+      margin-right: 10%;
+      @include large {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.contact-way > a {
+  img, span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+    transition: .5s;
+  }
+  img {
+    @include large {
+      width: 60px;
+    }
+    @include medium {
+      width: 40px;
+    }
+  }
+  span {
+    transform: translate(-50%, -50%) rotateY(-180deg);
+    font-size: 16px;
+  }
+  &:hover {
+    img {
+      transform: translate(-50%, -50%) rotateY(-180deg);
+    }
+    span {
+      transform: translate(-50%, -50%) rotateY(0);
+    }
+  }
+
+}
+.contact > p {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  @include medium {
+    font-size: 12px;
+  }
+}
