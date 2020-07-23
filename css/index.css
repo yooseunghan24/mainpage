@@ -350,7 +350,7 @@ article .center-box h3 {
 
 @media (max-width: 768px) {
   .about-bottom {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -370,33 +370,38 @@ article .center-box h3 {
 @media (max-width: 768px) {
   .skill-box-wrap {
     padding-top: 0;
+    padding-right: 5%;
   }
 }
 
 .skill-box-wrap > div {
-  width: 24%;
-  text-align: center;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .skill-box-wrap > div {
+    width: 49%;
+  }
 }
 
 @media (max-width: 768px) {
   .skill-box-wrap > div {
-    width: 29%;
+    width: 100%;
+    margin-top: 16px;
   }
-}
-
-.skill-box-wrap > div:nth-child(2), .skill-box-wrap > div:nth-child(5) {
-  margin: 0 4%;
 }
 
 .skill-img-box {
   display: inline-block;
-  margin: auto;
-  width: 100px;
+  width: 20%;
   height: 150px;
   -webkit-transition: .3s;
   transition: .3s;
-  background-position: 100%;
-  background-size: 100%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -404,12 +409,15 @@ article .center-box h3 {
   .skill-img-box {
     width: 44%;
     height: 130px;
+    background-size: 50%;
   }
 }
 
 @media (max-width: 768px) {
   .skill-img-box {
-    height: 90px;
+    width: 30%;
+    height: 40px;
+    background-size: contain;
   }
 }
 
@@ -438,10 +446,22 @@ article .center-box h3 {
 }
 
 .skill-text {
-  padding-top: 1%;
+  width: 70%;
   line-height: 1.8;
   text-shadow: 0 0 5px #000;
-  font-size: 16px;
+  font-size: 15px;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  word-break: keep-all;
+  margin-left: 3%;
+}
+
+@media (max-width: 1024px) {
+  .skill-text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -638,6 +658,7 @@ article .center-box h3 {
   color: #fff;
   line-height: 1;
   word-break: break-all;
+  text-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -650,6 +671,7 @@ article .center-box h3 {
   font-size: 16px;
   line-height: 1.5;
   opacity: .5;
+  margin: 10px 0;
 }
 
 @media (max-width: 1024px) {
