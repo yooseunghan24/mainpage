@@ -239,15 +239,11 @@ article .center-box h3 {
   transition: 1s;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
 }
 
 .iam.active {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-filter: blur(0);
-          filter: blur(0);
 }
 
 .iam p {
@@ -576,15 +572,11 @@ article .center-box h3 {
           transform: scale(0.65);
   -webkit-transition: .8s;
   transition: .8s;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
 }
 
 .slide-ul li.active {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-filter: none;
-          filter: none;
   z-index: 1;
 }
 
@@ -620,7 +612,7 @@ article .center-box h3 {
 .slide-info-wrap .slide-info {
   position: absolute;
   width: 100%;
-  top: 30px;
+  top: 47px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
