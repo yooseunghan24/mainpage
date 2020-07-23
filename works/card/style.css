@@ -25,14 +25,16 @@ h1 {
 	color: #fff;
 }
 .count {
+	display: inline-block;
+	width: 100px;
 	font-size: 30px;
-	margin-left: 50px;
+	margin: 0 0 30px 50px;
 	color: blue;
 }
 .wrap {
 	width: 600px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 .correct_or_wrong {
 	text-align: center;
@@ -50,8 +52,19 @@ h1 {
 	height: 150px;
 	position: relative;
 	cursor: pointer;
-	pointer-events: none;
-	transform: perspective(600px);
+	perspective: 1000px;
+}
+.card_wrap.turn .front {
+	transform: rotateY(0);
+}
+.card_wrap.turn .back {
+	transform: rotateY(-180deg);
+}
+.card_wrap.done .front {
+	transform: rotateY(0);
+}
+.card_wrap.done .back {
+	transform: rotateY(-180deg);
 }
 .card {
 	position: absolute;
@@ -75,10 +88,4 @@ h1 {
 }
 .back {
 	background: url(cardback.png) no-repeat center/cover;
-}
-.card_wrap.turn .front {
-	transform: rotateY(0);
-}
-.card_wrap.turn .back {
-	transform: rotateY(180deg);
 }
