@@ -141,13 +141,64 @@ nav ul li {
   left: 3%;
 }
 
-.side-btn.shortcut .github-btn {
+.side-btn.shortcut > a {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(../img/icon-github.png) no-repeat;
   text-indent: -9999px;
   overflow: hidden;
+}
+
+.side-btn.shortcut .game-btn {
+  background: url(../img/game.png) no-repeat;
+  margin-bottom: 20px;
+}
+
+.side-btn.shortcut .game-box {
+  position: absolute;
+  top: -16px;
+  left: 33px;
+  width: 134px;
+  overflow: hidden;
+}
+
+.side-btn.shortcut .game-box > div {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  -webkit-transform: translateX(-134px);
+          transform: translateX(-134px);
+  -webkit-transition: .3s;
+  transition: .3s;
+  line-height: 1.5;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  width: 114px;
+  margin-left: 20px;
+}
+
+.side-btn.shortcut .game-box > div.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.side-btn.shortcut .game-box > div::after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: -8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-left: 16px solid #ddd;
+  border-bottom: 16px solid transparent;
+}
+
+.side-btn.shortcut .game-box > div a:hover {
+  color: #999;
+}
+
+.side-btn.shortcut .github-btn {
+  background: url(../img/icon-github.png) no-repeat;
 }
 
 .side-btn.scroll {

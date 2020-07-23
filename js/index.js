@@ -3,6 +3,20 @@ const age = document.querySelector('.age');
 const date = new Date();
 age.textContent = date.getFullYear() - 1996 + 1;
 
+// 게임아이콘 클릭 이벤트
+const gameBtn = document.querySelector('.game-btn');
+const gameBox = document.querySelector('.game-box > div');
+let gameBtnClicked = false;
+gameBtn.addEventListener('click', () => {
+  if (!gameBtnClicked) {
+    gameBox.classList.add('active');
+    gameBtnClicked = true;
+  } else {
+    gameBox.classList.remove('active');
+    gameBtnClicked = false;
+  }
+})
+
 // 로딩 됐을 때 인트로 효과
 const iam = document.querySelector('.iam');
 window.addEventListener('load', () => {
@@ -17,13 +31,13 @@ let wheelFnc;
 
 function wheelUp() {
   wheelIndex === 0 ? wheelIndex = 0 : wheelIndex -= 1;
-  wrap.style.marginTop = `${-100*wheelIndex}vh`;
+  wrap.style.marginTop = `${-100 * wheelIndex}vh`;
 }
 function wheelDown() {
-  wheelIndex === article.length-1
-  ? wheelIndex = article.length-1
-  : wheelIndex += 1;
-  wrap.style.marginTop = `${-100*wheelIndex}vh`;
+  wheelIndex === article.length - 1
+    ? wheelIndex = article.length - 1
+    : wheelIndex += 1;
+  wrap.style.marginTop = `${-100 * wheelIndex}vh`;
 }
 
 window.addEventListener('wheel', (e) => {
@@ -35,8 +49,8 @@ window.addEventListener('wheel', (e) => {
 })
 
 // 터치 스크롤 이벤트
-let startY=0;
-let moveY=0;
+let startY = 0;
+let moveY = 0;
 let distance = 0;
 let isTouched = false;
 window.addEventListener('touchstart', (e) => {
@@ -45,7 +59,7 @@ window.addEventListener('touchstart', (e) => {
 });
 window.addEventListener('touchend', () => (isTouched = false));
 window.addEventListener('touchmove', (e) => {
-  if(!isTouched) return;
+  if (!isTouched) return;
   moveY = e.touches[0].clientY;
   distance = startY - moveY;
   clearTimeout(wheelFnc);
@@ -58,8 +72,8 @@ window.addEventListener('touchmove', (e) => {
 const navList = document.querySelectorAll('nav ul li');
 navList.forEach((ele, idx) => {
   ele.addEventListener('click', () => {
-    wheelIndex = idx+1;
-    wrap.style.marginTop = `${-100*(idx+1)}vh`;
+    wheelIndex = idx + 1;
+    wrap.style.marginTop = `${-100 * (idx + 1)}vh`;
   })
 })
 
@@ -79,8 +93,8 @@ const viewSite = document.querySelectorAll('.slide-info a');
 let slideIndex = 0;
 
 function prevFnc() {
-  slideIndex === 0 ? slideIndex = slideList.length-1 : slideIndex -= 1;
-  for(let i=0; i<slideList.length; i++) {
+  slideIndex === 0 ? slideIndex = slideList.length - 1 : slideIndex -= 1;
+  for (let i = 0; i < slideList.length; i++) {
     slideList[i].classList.remove('active');
     slideInfo[i].classList.remove('active');
     viewSite[i].classList.remove('active');
@@ -88,11 +102,11 @@ function prevFnc() {
   slideList[slideIndex].classList.add('active');
   slideInfo[slideIndex].classList.add('active');
   viewSite[slideIndex].classList.add('active');
-  slide.style.marginLeft = `${(-slideList[0].clientWidth)*slideIndex}px`;
+  slide.style.marginLeft = `${(-slideList[0].clientWidth) * slideIndex}px`;
 }
 function nextFnc() {
-  slideIndex === slideList.length-1 ? slideIndex = 0 : slideIndex += 1;
-  for(let i=0; i<slideList.length; i++) {
+  slideIndex === slideList.length - 1 ? slideIndex = 0 : slideIndex += 1;
+  for (let i = 0; i < slideList.length; i++) {
     slideList[i].classList.remove('active');
     slideInfo[i].classList.remove('active');
     viewSite[i].classList.remove('active');
@@ -100,7 +114,7 @@ function nextFnc() {
   slideList[slideIndex].classList.add('active');
   slideInfo[slideIndex].classList.add('active');
   viewSite[slideIndex].classList.add('active');
-  slide.style.marginLeft = `${(-slideList[0].clientWidth)*slideIndex}px`;
+  slide.style.marginLeft = `${(-slideList[0].clientWidth) * slideIndex}px`;
 }
 
 prevBtn.addEventListener('click', prevFnc);
