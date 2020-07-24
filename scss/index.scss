@@ -125,6 +125,8 @@ nav ul {
         position: relative;
         width: 114px;
         margin-left: 20px;
+        background: #1b1b1d;
+        z-index: 1;
         &.active {
           transform: translateX(0);
         }
@@ -135,7 +137,7 @@ nav ul {
           left: -8px;
           transform: rotate(-45deg);
           border: {
-            left: 16px solid #ddd;
+            left: 16px solid #fff;
             bottom: 16px solid transparent;
           }
         }
@@ -505,6 +507,9 @@ article {
       margin: 10px 0;
       @include large {
         margin: 2% 0;
+      }
+      @include medium {
+        font-size: 12px;
       }
     }
     a {

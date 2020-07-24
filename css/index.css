@@ -175,6 +175,8 @@ nav ul li {
   position: relative;
   width: 114px;
   margin-left: 20px;
+  background: #1b1b1d;
+  z-index: 1;
 }
 
 .side-btn.shortcut .game-box > div.active {
@@ -189,7 +191,7 @@ nav ul li {
   left: -8px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  border-left: 16px solid #ddd;
+  border-left: 16px solid #fff;
   border-bottom: 16px solid transparent;
 }
 
@@ -728,6 +730,12 @@ article .center-box h3 {
 @media (max-width: 1024px) {
   .slide-info-wrap .slide-info p {
     margin: 2% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-info-wrap .slide-info p {
+    font-size: 12px;
   }
 }
 
