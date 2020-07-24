@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 .moving-wrap {
-  transition: .6s;
+  transition: 0.6s;
 }
 header {
   position: fixed;
@@ -103,9 +103,18 @@ nav ul {
       height: 32px;
       text-indent: -9999px;
       overflow: hidden;
+      background-repeat: no-repeat;
+      @include medium {
+        width: 24px;
+        height: 24px;
+        background: {
+          position: center;
+          size: 100%;
+        }
+      }
     }
     .game-btn {
-      background: url(../img/game.png) no-repeat;
+      background-image: url(../img/game.png);
       margin-bottom: 20px;
     }
     .game-box {
@@ -117,8 +126,8 @@ nav ul {
       & > div {
         border: 1px solid #fff;
         border-radius: 5px;
-        transform:  translateX(-135px);
-        transition: .3s;
+        transform: translateX(-135px);
+        transition: 0.3s;
         line-height: 1.5;
         padding: 5px;
         text-align: center;
@@ -131,7 +140,7 @@ nav ul {
           transform: translateX(0);
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 19px;
           left: -8px;
@@ -147,7 +156,7 @@ nav ul {
       }
     }
     .github-btn {
-      background: url(../img/icon-github.png) no-repeat;
+      background-image: url(../img/icon-github.png);
     }
   }
   &.scroll {
@@ -159,14 +168,15 @@ nav ul {
   }
 }
 
-.up-btn, .down-btn {
+.up-btn,
+.down-btn {
   display: inline-block;
   text-indent: -9999px;
   position: relative;
   width: 20px;
   height: 20px;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 10px;
     right: 0;
@@ -203,7 +213,7 @@ article {
       font-size: 64px;
       font-family: $font-title;
       text-align: center;
-      text-shadow: 0 0 3px rgba(0,0,0,0.5);
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
       letter-spacing: 7px;
       @include medium {
         font-size: 34px;
@@ -227,7 +237,7 @@ article {
       font-size: 11px;
     }
     &:first-child {
-      padding-left: 20vw;  
+      padding-left: 20vw;
     }
     &:last-child {
       padding-left: 40vw;
@@ -259,8 +269,8 @@ article {
   .face-img-box {
     text-align: center;
     img {
-       max-width: 40%;
-       box-shadow: 0 0 3px 1px rgba(0,0,0,0.5);
+      max-width: 40%;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
     }
   }
   .face-info-box {
@@ -303,12 +313,16 @@ article {
     width: 45%;
     display: flex;
     margin-top: 40px;
+    align-items: center;
     @include large {
       width: 49%;
     }
     @include medium {
       width: 100%;
       margin-top: 16px;
+      &:nth-child(even) {
+        order: 1;
+      }
     }
   }
 }
@@ -316,7 +330,7 @@ article {
   display: inline-block;
   width: 20%;
   height: 150px;
-  transition: .3s;
+  transition: 0.3s;
   background: {
     position: center;
     repeat: no-repeat;
@@ -332,22 +346,22 @@ article {
     background-size: contain;
   }
   &.html {
-    background-image: url(../img/skill_html.png)
+    background-image: url(../img/skill_html.png);
   }
   &.css {
-    background-image: url(../img/skill_css.png)
+    background-image: url(../img/skill_css.png);
   }
   &.scss {
-    background-image: url(../img/skill_sass.png)
+    background-image: url(../img/skill_sass.png);
   }
   &.js {
-    background-image: url(../img/skill_js.png)
+    background-image: url(../img/skill_js.png);
   }
   &.git {
-    background-image: url(../img/skill_git.png)
+    background-image: url(../img/skill_git.png);
   }
   &.jquery {
-    background-image: url(../img/skill_jquery.png)
+    background-image: url(../img/skill_jquery.png);
   }
 }
 .skill-text {
@@ -394,25 +408,35 @@ article {
     width: 30px;
     height: 30px;
     text-indent: -9999px;
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       width: 1px;
       height: 30px;
       background: #ddd;
-      @include small {
+      @include medium {
         height: 18px;
       }
     }
     &::before {
       top: -13px;
+      @include medium {
+        top: -8px;
+      }
+      @include small {
+        top: -5px;
+      }
     }
     &::after {
       top: 13px;
+      @include medium {
+        top: 8px;
+      }
       @include small {
-        top: 3px;
+        top: 10px;
       }
     }
   }
@@ -442,11 +466,11 @@ article {
 .slide-ul {
   display: flex;
   transform: translateX(12.3vw);
-  transition: .7s;
+  transition: 0.7s;
   li {
     flex-shrink: 0;
     transform: scale(0.65);
-    transition: .8s;
+    transition: 0.8s;
     &.active {
       transform: scale(1);
       z-index: 1;
@@ -477,11 +501,11 @@ article {
   .slide-info {
     position: absolute;
     width: 100%;
-    top: 47px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    transition: .8s;
+    transition: 0.8s;
     @include medium {
       top: 0;
     }
@@ -503,7 +527,7 @@ article {
     p {
       font-size: 16px;
       line-height: 1.5;
-      opacity: .5;
+      opacity: 0.5;
       margin: 10px 0;
       @include large {
         margin: 2% 0;
@@ -519,14 +543,14 @@ article {
       border-radius: 10px;
       color: #eee;
       margin-top: 1%;
-      transition: .3s;
+      transition: 0.3s;
       display: none;
       font-size: 16px;
       @include medium {
         font-size: 12px;
       }
       &.active {
-        display: inline-block
+        display: inline-block;
       }
       &:hover {
         background: #eee;
@@ -558,13 +582,14 @@ article {
   }
 }
 .contact-way > a {
-  img, span {
+  img,
+  span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     backface-visibility: hidden;
-    transition: .5s;
+    transition: 0.5s;
   }
   img {
     @include large {
@@ -586,7 +611,6 @@ article {
       transform: translate(-50%, -50%) rotateY(0);
     }
   }
-
 }
 .contact > p {
   position: absolute;
