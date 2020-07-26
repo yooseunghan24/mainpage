@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로또번호 생성기</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="wrap">
-    <h1>로또번호 생성기</h1>
-    <label class="sheet_wrap" for="sheet">매수 선택
-      <select name="sheet" id="sheet">
-        <option value="1">1</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-      </select>
-    </label>
-    <button class="lotto" type="button">번호뽑기</button>
-    <p class="number_list">번호리스트</p>
-    <div class="accumulate"></div>
-    <span class="dev">제작자: 유승한</span>
-    <button class="reset" type="button">번호리셋</button>
-  </div>
-<script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또번호 생성기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>로또번호 생성기</h1>
+      <label class="sheet_wrap" for="sheet"
+        >매수 선택
+        <select name="sheet" id="sheet">
+          <option value="1">1</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <button class="lotto" type="button">번호뽑기</button>
+      <p class="number_list">번호리스트</p>
+      <div class="accumulate"></div>
+      <footer>
+        <span class="dev">제작자: 유승한</span>
+        <button class="reset" type="button">번호리셋</button>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
