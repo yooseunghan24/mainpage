@@ -315,11 +315,8 @@ article {
     width: 25%;
     margin-top: 20px;
     overflow: hidden;
-    @include large {
-      width: 49%;
-    }
     @include medium {
-      width: 100%;
+      width: 50%;
       margin-top: 16px;
     }
   }
@@ -340,6 +337,7 @@ article {
   font-size: 18px;
   transform: translateY(100%);
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .skill-img-box {
@@ -350,11 +348,6 @@ article {
     repeat: no-repeat;
   }
   margin: auto;
-  @include large {
-    width: 44%;
-    height: 130px;
-    background-size: 50%;
-  }
   @include medium {
     width: 30%;
     height: 40px;

@@ -448,15 +448,9 @@ article .center-box h3 {
   overflow: hidden;
 }
 
-@media (max-width: 1024px) {
-  .skill-box-wrap .skill-box {
-    width: 49%;
-  }
-}
-
 @media (max-width: 768px) {
   .skill-box-wrap .skill-box {
-    width: 100%;
+    width: 50%;
     margin-top: 16px;
   }
 }
@@ -487,6 +481,7 @@ article .center-box h3 {
           transform: translateY(100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .skill-img-box {
@@ -496,14 +491,6 @@ article .center-box h3 {
   background-position: center;
   background-repeat: no-repeat;
   margin: auto;
-}
-
-@media (max-width: 1024px) {
-  .skill-img-box {
-    width: 44%;
-    height: 130px;
-    background-size: 50%;
-  }
 }
 
 @media (max-width: 768px) {
