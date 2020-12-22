@@ -89,6 +89,20 @@ nav ul {
   li {
     letter-spacing: 1.5px;
     font-size: 16px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #ddd;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
 .side-btn {
