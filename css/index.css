@@ -367,7 +367,7 @@ article .center-box h3 {
 
 /* about */
 .about-me > div {
-  padding: 7% 4% 0;
+  padding: 7% 7% 0;
 }
 
 .about-top {
@@ -423,7 +423,6 @@ article .center-box h3 {
 .about-bottom {
   line-height: 2;
   font-size: 18px;
-  text-align: center;
 }
 
 @media (max-width: 1024px) {

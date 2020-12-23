@@ -273,7 +273,7 @@ article {
 
 /* about */
 .about-me > div {
-  padding: 7% 4% 0;
+  padding: 7% 7% 0;
 }
 .about-top {
   display: flex;
@@ -306,7 +306,6 @@ article {
 .about-bottom {
   line-height: 2;
   font-size: 18px;
-  text-align: center;
   @include large {
     font-size: 16px;
   }
